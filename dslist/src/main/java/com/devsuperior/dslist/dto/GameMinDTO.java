@@ -6,7 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class GameDTO {
+public class GameMinDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,11 +21,11 @@ public class GameDTO {
     @Column(columnDefinition = "TEXT")
     private String shortDescription;
 
-    public GameDTO() {
+    public GameMinDTO() {
 
     }
 
-    public GameDTO(Game entity) {
+    public GameMinDTO(Game entity) {
         id = entity.getId();
         title = entity.getTitle();
         year = entity.getYear();
